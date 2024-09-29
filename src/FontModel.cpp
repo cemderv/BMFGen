@@ -322,7 +322,7 @@ void FontModel::set_preview_text(const QString& value)
     if (m_preview_text != value)
     {
         m_preview_text = value;
-        emit properties_changed();
+        emit properties_only_relevant_for_save_changed();
     }
 }
 

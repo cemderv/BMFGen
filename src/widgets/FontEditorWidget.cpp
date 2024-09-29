@@ -37,6 +37,7 @@ FontEditorWidget::FontEditorWidget(QWidget* parent, const QString& font_filename
         {
             generate_preview_font();
             emit preview_font_generation_done(this);
+            set_is_unsaved(true);
         }
         catch (const std::exception& ex)
         {
@@ -44,7 +45,7 @@ FontEditorWidget::FontEditorWidget(QWidget* parent, const QString& font_filename
         }
     });
 
-    connect(m_font, &FontModel::properties_only_relevant_for_save_changed, this, [this] {
+    connect(m_font, &FontModel::properties_only_relevant_for_save_changed, [this] {
         set_is_unsaved(true);
     });
 
@@ -84,7 +85,6 @@ void FontEditorWidget::generate_preview_font()
         m_font_gen_context->generate_font(*m_font, chars);
 
     m_font->set_generated_font(generated_font);
-    set_is_unsaved(false);
 }
 
 void FontEditorWidget::set_is_unsaved(bool value)
