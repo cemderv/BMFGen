@@ -1,0 +1,49 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ui/alphaback.png</file>
+        <file>ui/alphabacklight.png</file>
+
+        <file>ui/icons/osx-dark/check.svg</file>
+        <file>ui/icons/osx-dark/image.svg</file>
+        <file>ui/icons/osx-dark/document-new.svg</file>
+        <file>ui/icons/osx-dark/document-open.svg</file>
+        <file>ui/icons/osx-dark/document-save.svg</file>
+        <file>ui/icons/osx-dark/edit.svg</file>
+        <file>ui/icons/osx-dark/export.svg</file>
+        <file>ui/icons/osx-dark/export.svg</file>
+        <file>ui/icons/osx-dark/feedback.svg</file>
+        <file>ui/icons/osx-dark/font.svg</file>
+        <file>ui/icons/osx-dark/fontsize.svg</file>
+        <file>ui/icons/osx-dark/globe.svg</file>
+        <file>ui/icons/osx-dark/go-next.svg</file>
+        <file>ui/icons/osx-dark/go-previous.svg</file>
+        <file>ui/icons/osx-dark/settings.svg</file>
+        <file>ui/icons/osx-dark/warning.svg</file>
+        <file>ui/icons/osx-dark/zoom-in.svg</file>
+        <file>ui/icons/osx-dark/zoom-out.svg</file>
+
+        <file>ui/icons/osx-light/check.svg</file>
+        <file>ui/icons/osx-light/image.svg</file>
+        <file>ui/icons/osx-light/document-new.svg</file>
+        <file>ui/icons/osx-light/document-open.svg</file>
+        <file>ui/icons/osx-light/document-save.svg</file>
+        <file>ui/icons/osx-light/edit.svg</file>
+        <file>ui/icons/osx-light/export.svg</file>
+        <file>ui/icons/osx-light/export.svg</file>
+        <file>ui/icons/osx-light/feedback.svg</file>
+        <file>ui/icons/osx-light/font.svg</file>
+        <file>ui/icons/osx-light/fontsize.svg</file>
+        <file>ui/icons/osx-light/globe.svg</file>
+        <file>ui/icons/osx-light/go-next.svg</file>
+        <file>ui/icons/osx-light/go-previous.svg</file>
+        <file>ui/icons/osx-light/settings.svg</file>
+        <file>ui/icons/osx-light/warning.svg</file>
+        <file>ui/icons/osx-light/zoom-in.svg</file>
+        <file>ui/icons/osx-light/zoom-out.svg</file>
+
+        <file>ui/dropdown-down.svg</file>
+        <file>ui/dropdown-up.svg</file>
+        <file>ui/close.svg</file>
+        <file>ui/close-white.svg</file>
+    </qresource>
+</RCC>

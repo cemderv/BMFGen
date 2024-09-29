@@ -1,0 +1,162 @@
+QWidget {
+  background-color: #ffffff;
+}
+
+QPushButton,
+QComboBox,
+QLineEdit,
+QPlainTextEdit {
+    color: #2d2d2d;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    border-bottom: 1px solid #aaaaaa;
+    background-color: #fafafa;
+    min-width: 60px;
+    min-height: 24px;
+    max-height: 24px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+QLineEdit {
+  border-top: 1px solid #aaaaaa;
+  border-bottom: 1px solid #eeeeee;
+  background-color: #f8f8f8;
+  color: #2d2d2d;
+  placeholder-text-color: #aaaaaa;
+}
+
+QLineEdit:focus {
+  background-color: #ffffff;
+}
+
+QLineEdit:read-only {
+  background-color: #aaaaaa;
+}
+
+QPushButton:hover,
+QComboBox:hover {
+  background-color: #ffffff;
+}
+
+QPushButton:pressed {
+  background-color: #eeeeee;
+}
+
+QPushButton:default {
+  background-color: #0760FE;
+  border-color: #0151e4;
+  color: #ffffff;
+}
+
+QPushButton:default:hover {
+  background-color: #347bfe;
+}
+
+QPushButton:default:pressed {
+  background-color: #0151e4;
+}
+
+QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+    background-color: #eeeeee;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+
+    border-left-width: 1px;
+    border-left-color: #cccccc;
+    border-left-style: solid;
+    border-top-right-radius: 6px;
+}
+
+QComboBox::down-arrow {
+    image: url(:/ui/dropdown-down.svg);
+    width: 20px;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    color: #2d2d2d;
+    selection-background-color: #eeeeee;
+    selection-color: #000000;
+    background-color: #eeeeee;
+}
+
+QSlider::groove:horizontal {
+    border: 1px solid #888888;
+    height: 2px;
+    background-color: #aaaaaa;
+    margin: 2px 0;
+    border-radius: 2px;
+}
+
+QSlider::handle:horizontal {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #007cff, stop:1 #0063ff);
+    border: 1px solid #0760fe;
+    width: 12px;
+    margin: -6px 0; /* handle is placed by default on the contents rect of the groove. Expand outside the groove */
+    border-radius: 6px;
+}
+
+QSlider::handle:horizontal:hover {
+    background-color: #4f8ffc;
+}
+
+QWidget#centralwidget {
+  background-color: #ffffff;
+}
+
+QGroupBox {
+  background-color: #ffffff;
+  color: #2d2d2d;
+}
+
+QGroupBox:title {
+  subcontrol-origin: margin;
+  subcontrol-position: top center;
+  padding: 0 3px;
+  background-color: #ffffff;
+}
+
+QTabWidget::pane {
+  border-top: 1px solid #2d2d2d;
+}
+
+QTabWidget::tab-bar {
+  left: 5px;
+}
+
+QTabBar::tab {
+  background-color: #cccccc;
+  border: 1px solid #aaaaaa;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  min-width: 100px;
+  padding: 4px;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+  background-color: #0760FE;
+  color: #ffffff;
+}
+
+QTabBar::tab:selected {
+  border-color: #cccccc;
+  border-bottom-color: #aaaaaa;
+}
+
+QTabBar::tab:!selected {
+  margin-top: 2px;
+}
+
+QTabBar::close-button {
+  image: url(:/ui/close.svg);
+}
+
+QTabBar::close-button:selected {
+  image: url(:/ui/close-white.svg);
+}

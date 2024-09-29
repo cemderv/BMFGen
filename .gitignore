@@ -1,0 +1,8 @@
+build-*
+build/
+.idea/
+.vscode/
+*.user
+cmake-build-*/
+.vs/
+vcpkg/

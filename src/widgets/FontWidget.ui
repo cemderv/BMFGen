@@ -1,0 +1,1169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FontWidget</class>
+ <widget class="QWidget" name="FontWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1108</width>
+    <height>1011</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string/>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="spacing">
+    <number>6</number>
+   </property>
+   <property name="leftMargin">
+    <number>6</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>6</number>
+   </property>
+   <property name="bottomMargin">
+    <number>6</number>
+   </property>
+   <item>
+    <widget class="QScrollArea" name="fontSettingsScrollArea">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+       <horstretch>2</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>450</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Plain</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="fontSettingsScrollAreaContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>448</width>
+        <height>1003</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>31</number>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="grp_general">
+         <property name="title">
+          <string>General</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4" columnstretch="6,10">
+          <item row="3" column="1">
+           <widget class="QCheckBox" name="chk_include_kerning">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="baseSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QCheckBox" name="chk_anti_aliasing">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="RightAlignedLabel" name="lbl_font">
+            <property name="text">
+             <string>Font</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="FontSelectionWidget" name="font_selection_widget" native="true">
+            <property name="toolTip">
+             <string>The face of the font.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="RightAlignedLabel" name="lbl_include_kerning">
+            <property name="text">
+             <string>Include Kerning</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QPushButton" name="btn_font_variations">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Edit the
+                                                        variations of the font.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                                    </string>
+            </property>
+            <property name="text">
+             <string>Edit Variations</string>
+            </property>
+            <property name="icon">
+             <iconset theme="fontsize"/>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="ComboBox" name="cmb_max_page_size">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::FocusPolicy::NoFocus</enum>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The maximum
+                                                        size of a single page, in pixels.&lt;/p&gt;&lt;p&gt;If
+                                                        glyphIndices exceed a page, they are moved to the next (new)
+                                                        page.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                                    </string>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>64</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>128</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>256</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>512</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>1024</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>2048</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>4096</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>8192</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="RightAlignedLabel" name="lbl_anti_aliasing">
+            <property name="text">
+             <string>Anti-aliasing</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QPushButton" name="btn_edit_characters">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Edit which
+                                                        characters should be included in the font.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                                    </string>
+            </property>
+            <property name="text">
+             <string>Edit Characters</string>
+            </property>
+            <property name="icon">
+             <iconset theme="globe"/>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="RightAlignedLabel" name="lbl_max_page_size">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Max Page Size</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="grp_export">
+         <property name="title">
+          <string>Export Options</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3" columnstretch="6,10">
+          <item row="5" column="0">
+           <widget class="RightAlignedLabel" name="lbl_allow_mono">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allow the
+                                                        export of monochromatic (8-bit grayscale) images if a page only
+                                                        contains grayscale values.&lt;/p&gt;&lt;p&gt;Otherwise, images
+                                                        are exported as 32-bit RGBA.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                                    </string>
+            </property>
+            <property name="text">
+             <string>Allow mono</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="FontImageTypeComboBox" name="cmb_image_type">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The output
+                                                        image format for all pages.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                                    </string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QCheckBox" name="chk_flip_images_upside_down">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Whether images
+                                                        should be flipped upside down during export.&lt;/p&gt;&lt;p&gt;This
+                                                        is useful for graphics coordinate systems that have their origin
+                                                        in the bottom-left corner.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                                    </string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="cmb_font_desc_type">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The type of
+                                                        the exported font's description.&lt;/p&gt;&lt;p&gt;The
+                                                        description file contains information about the generated font
+                                                        such as dimensions, glyph positions and page locations.&lt;/p&gt;&lt;p&gt;The
+                                                        font's images are exported separately.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                                    </string>
+            </property>
+            <item>
+             <property name="text">
+              <string>JSON</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>XML</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Text</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="RightAlignedLabel" name="lbl_description_type">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Description Type</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QCheckBox" name="chk_allow_monochromatic_images">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Allow the
+                                                        export of monochromatic (8-bit grayscale) images &lt;span style=&quot;
+                                                        font-weight:700;&quot;&gt;if a page contains only grayscale
+                                                        values&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Otherwise, images are
+                                                        exported as 32-bit RGBA.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                                    </string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="RightAlignedLabel" name="lbl_flip_images_upside_down">
+            <property name="text">
+             <string>Flip images upside down</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="RightAlignedLabel" name="lbl_image_type">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Image Type</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="RightAlignedLabel" name="lbl_output_directory">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Output Directory</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="txt_output_directory">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The path to
+                                                        where the font should be exported.&lt;/p&gt;&lt;p&gt;Possible
+                                                        placeholders are:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;
+                                                        font-weight:700;&quot;&gt;$(FONT_NAME)&lt;/span&gt; - The name
+                                                        of the font&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;$(FONT_SIZE)&lt;/span&gt;
+                                                        - The size of the font, in pixels&lt;/p&gt;&lt;p&gt;&lt;span
+                                                        style=&quot; font-style:italic;&quot;&gt;Default value:
+                                                        $(FONT_NAME)_exported/&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                                    </string>
+            </property>
+            <property name="placeholderText">
+             <string>$(FONT_NAME)_exported/</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="grp_fill">
+         <property name="title">
+          <string>Fill</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <widget class="FillOptionsWidget" name="fill_options_widget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="grp_outline">
+         <property name="title">
+          <string>Outline</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout" columnstretch="6,10">
+          <item row="1" column="1">
+           <widget class="QComboBox" name="cmb_stroke_style">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <item>
+             <property name="text">
+              <string>Solid Line</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Dash Line</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Dot Line</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Dash-Dot Line</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Dash-Dot-Dot Line</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="RightAlignedLabel" name="lbl_stroke_style">
+            <property name="text">
+             <string>Style</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="RightAlignedLabel" name="lbl_stroke_cap_style">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Cap Style</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QSlider" name="sld_stroke_miter_limit">
+            <property name="maximum">
+             <number>200</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="ComboBox" name="cmb_stroke_cap_style">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <item>
+             <property name="text">
+              <string>Flat</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Square</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Round</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="ComboBox" name="cmb_stroke_join_style">
+            <item>
+             <property name="text">
+              <string>Miter</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bevel</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Round</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="7" column="0" colspan="2">
+           <widget class="FillOptionsWidget" name="stroke_fill_options_widget" native="true"/>
+          </item>
+          <item row="0" column="1">
+           <widget class="SpinBox" name="num_stroke_spread">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="toolTip">
+             <string>The thickness of the font outline, in pixels.</string>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>50</number>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="RightAlignedLabel" name="lbl_stroke_join_style">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Join Style</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="RightAlignedLabel" name="lbl_stroke_spread">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Thickness</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="RightAlignedLabel" name="lbl_stroke_miter_limit">
+            <property name="text">
+             <string>Miter Limit</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="RightAlignedLabel" name="lbl_stroke_dash_offset">
+            <property name="text">
+             <string>Dash Offset</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QSlider" name="sld_stroke_dash_offset">
+            <property name="maximum">
+             <number>100</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="page">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QSplitter" name="previewWidgetsSplitter">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>1</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="handleWidth">
+          <number>7</number>
+         </property>
+         <property name="childrenCollapsible">
+          <bool>true</bool>
+         </property>
+         <widget class="TextPreviewWidget" name="text_preview_widget" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>1</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page_2">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QWidget" name="widget" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="lbl_error_message_icon">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>32</width>
+              <height>32</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>32</width>
+              <height>32</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="../resources/UIResources.qrc">:/ui/icons/osx-dark/warning.svg</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_error_message">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RightAlignedLabel</class>
+   <extends>QLabel</extends>
+   <header>widgets/RightAlignedLabel.hpp</header>
+  </customwidget>
+  <customwidget>
+   <class>TextPreviewWidget</class>
+   <extends>QWidget</extends>
+   <header>widgets/TextPreviewWidget.hpp</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ComboBox</class>
+   <extends>QComboBox</extends>
+   <header>widgets/ComboBox.hpp</header>
+  </customwidget>
+  <customwidget>
+   <class>FontSelectionWidget</class>
+   <extends>QWidget</extends>
+   <header>widgets/FontSelectionWidget.hpp</header>
+   <container>1</container>
+   <slots>
+    <signal>fontSelectionChanged(QString)</signal>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>FillOptionsWidget</class>
+   <extends>QWidget</extends>
+   <header>widgets/FillOptionsWidget.hpp</header>
+   <container>1</container>
+   <slots>
+    <signal>fill_changed(FontFill)</signal>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>FontImageTypeComboBox</class>
+   <extends>QComboBox</extends>
+   <header>widgets/FontImageTypeComboBox.hpp</header>
+  </customwidget>
+  <customwidget>
+   <class>SpinBox</class>
+   <extends>QSpinBox</extends>
+   <header>widgets/SpinBox.hpp</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resources/UIResources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>fill_options_widget</sender>
+   <signal>fill_changed(FontFill)</signal>
+   <receiver>FontWidget</receiver>
+   <slot>on_base_fill_changed(FontFill)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>439</x>
+     <y>521</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>429</x>
+     <y>389</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>stroke_fill_options_widget</sender>
+   <signal>fill_changed(FontFill)</signal>
+   <receiver>FontWidget</receiver>
+   <slot>on_stroke_fill_changed(FontFill)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>439</x>
+     <y>805</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>429</x>
+     <y>389</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmb_max_page_size</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>FontWidget</receiver>
+   <slot>on_max_page_extent_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>722</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>429</x>
+     <y>389</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmb_image_type</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>FontWidget</receiver>
+   <slot>on_font_image_type_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>480</x>
+     <y>303</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>782</x>
+     <y>2</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>txt_output_directory</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>FontWidget</receiver>
+   <slot>on_output_directory_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>630</x>
+     <y>371</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>768</x>
+     <y>8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chk_flip_images_upside_down</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>FontWidget</receiver>
+   <slot>on_flip_images_upside_down_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>383</x>
+     <y>339</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>750</x>
+     <y>778</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_edit_characters</sender>
+   <signal>clicked()</signal>
+   <receiver>FontWidget</receiver>
+   <slot>on_edit_char_sets_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>211</x>
+     <y>473</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>488</x>
+     <y>380</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num_stroke_spread</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>FontWidget</receiver>
+   <slot>on_stroke_spread_changed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>681</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>578</x>
+     <y>393</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chk_allow_monochromatic_images</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>FontWidget</receiver>
+   <slot>on_allow_monochromatic_images_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>338</x>
+     <y>661</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>578</x>
+     <y>393</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmb_stroke_cap_style</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>FontWidget</receiver>
+   <slot>on_stroke_cap_style_changed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>341</x>
+     <y>901</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>553</x>
+     <y>505</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmb_stroke_join_style</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>FontWidget</receiver>
+   <slot>on_stroke_join_style_changed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>341</x>
+     <y>937</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>553</x>
+     <y>505</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>grp_fill</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>FontWidget</receiver>
+   <slot>on_fill_header_check_changed(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>230</x>
+     <y>892</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>553</x>
+     <y>505</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>grp_outline</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>FontWidget</receiver>
+   <slot>on_outline_header_check_changed(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>230</x>
+     <y>1029</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>553</x>
+     <y>505</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmb_font_desc_type</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>FontWidget</receiver>
+   <slot>on_font_desc_type_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>308</x>
+     <y>619</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>553</x>
+     <y>505</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chk_include_kerning</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>FontWidget</receiver>
+   <slot>on_use_kerning_changed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>728</x>
+     <y>247</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>429</x>
+     <y>389</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmb_stroke_style</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>FontWidget</receiver>
+   <slot>on_stroke_style_changed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>314</x>
+     <y>685</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>553</x>
+     <y>505</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sld_stroke_dash_offset</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>FontWidget</receiver>
+   <slot>on_stroke_dash_offset_changed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>314</x>
+     <y>794</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>553</x>
+     <y>505</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sld_stroke_miter_limit</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>FontWidget</receiver>
+   <slot>on_stroke_miter_limit_changed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>314</x>
+     <y>794</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>553</x>
+     <y>505</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_font_variations</sender>
+   <signal>clicked()</signal>
+   <receiver>FontWidget</receiver>
+   <slot>on_edit_font_variations_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>236</x>
+     <y>422</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>553</x>
+     <y>505</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chk_anti_aliasing</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>FontWidget</receiver>
+   <slot>on_anti_aliasing_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>318</x>
+     <y>171</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>553</x>
+     <y>505</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_base_fill_changed(FontFill)</slot>
+  <slot>on_stroke_fill_changed(FontFill)</slot>
+  <slot>on_font_type_changed()</slot>
+  <slot>on_font_size_changed()</slot>
+  <slot>on_max_page_extent_changed()</slot>
+  <slot>on_use_kerning_changed(int)</slot>
+  <slot>on_stroke_cap_style_changed(int)</slot>
+  <slot>on_stroke_join_style_changed(int)</slot>
+  <slot>on_font_selection_changed(QString)</slot>
+  <slot>on_stroke_spread_changed(int)</slot>
+  <slot>on_font_name_changed(QString)</slot>
+  <slot>on_font_desc_type_changed()</slot>
+  <slot>on_font_image_type_changed()</slot>
+  <slot>on_flip_images_upside_down_changed()</slot>
+  <slot>on_output_directory_changed()</slot>
+  <slot>on_character_set_selection_changed(QListWidgetItem*)</slot>
+  <slot>on_edit_char_sets_clicked()</slot>
+  <slot>on_font_desc_type_clicked()</slot>
+  <slot>on_char_set_double_clicked(QListWidgetItem*)</slot>
+  <slot>on_allow_monochromatic_images_changed()</slot>
+  <slot>on_fill_header_check_changed(bool)</slot>
+  <slot>on_outline_header_check_changed(bool)</slot>
+  <slot>on_stroke_style_changed(int)</slot>
+  <slot>on_stroke_dash_offset_changed(int)</slot>
+  <slot>on_stroke_miter_limit_changed(int)</slot>
+  <slot>on_edit_font_variations_clicked()</slot>
+  <slot>on_anti_aliasing_changed()</slot>
+ </slots>
+</ui>

@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>DefaultFontConfig.json</file>
+        <file>AppIcon512.png</file>
+        <file>MainStylesheet.qss</file>
+    </qresource>
+</RCC>

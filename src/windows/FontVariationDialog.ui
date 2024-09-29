@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FontVariationDialog</class>
+ <widget class="QDialog" name="FontVariationDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>414</width>
+    <height>255</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Font Variations</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Select font variations.</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QListWidget" name="list_widget">
+     <item>
+      <property name="text">
+       <string>1x Scale</string>
+      </property>
+      <property name="toolTip">
+       <string>This variation represents the default size and is always enabled.</string>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="flags">
+       <set>ItemIsSelectable|ItemIsDragEnabled</set>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>0.5x Scale</string>
+      </property>
+      <property name="toolTip">
+       <string>Scale the font size by 0.5.</string>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1.5x Scale</string>
+      </property>
+      <property name="toolTip">
+       <string>Scale the font size by 1.5.</string>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2x Scale</string>
+      </property>
+      <property name="toolTip">
+       <string>Scale the font size by 2.0.</string>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Font variations allow you to include downscaled and upscaled versions of your font in one single file. This is necessary if you want to support multiple DPI scalings in your application.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="btn_box">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btn_box</sender>
+   <signal>accepted()</signal>
+   <receiver>FontVariationDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>206</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>206</x>
+     <y>127</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_box</sender>
+   <signal>rejected()</signal>
+   <receiver>FontVariationDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>206</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>206</x>
+     <y>127</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>list_widget</sender>
+   <signal>itemDoubleClicked(QListWidgetItem*)</signal>
+   <receiver>FontVariationDialog</receiver>
+   <slot>on_item_double_clicked(QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>206</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>206</x>
+     <y>127</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_item_double_clicked(QListWidgetItem*)</slot>
+ </slots>
+</ui>

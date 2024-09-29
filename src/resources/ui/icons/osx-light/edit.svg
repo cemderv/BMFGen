@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+        fill="#96AABE"
+        width="800px"
+        height="800px"
+        viewBox="0 0 256 256"
+        id="Flat"
+        stroke="#96AABE"
+        version="1.1"
+        sodipodi:docname="edit.svg"
+        inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
+        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:svg="http://www.w3.org/2000/svg">
+    <defs
+            id="defs14"/>
+    <sodipodi:namedview
+            id="namedview12"
+            pagecolor="#ffffff"
+            bordercolor="#000000"
+            borderopacity="0.25"
+            inkscape:showpageshadow="2"
+            inkscape:pageopacity="0.0"
+            inkscape:pagecheckerboard="0"
+            inkscape:deskcolor="#d1d1d1"
+            showgrid="false"
+            inkscape:zoom="0.295"
+            inkscape:cx="403.38983"
+            inkscape:cy="400"
+            inkscape:window-width="1309"
+            inkscape:window-height="456"
+            inkscape:window-x="0"
+            inkscape:window-y="38"
+            inkscape:window-maximized="0"
+            inkscape:current-layer="Flat"/>
+    <g
+            id="SVGRepo_bgCarrier"
+            stroke-width="0"/>
+    <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+    <g
+            id="SVGRepo_iconCarrier"
+            style="fill:#6e6e6e;fill-opacity:1;stroke:none">
+        <g
+                opacity="0.2"
+                id="g6"
+                style="fill:#6e6e6e;fill-opacity:1;stroke:none">
+            <path
+                    d="M136,64l56,56,26.34315-26.34315a8,8,0,0,0,0-11.3137l-44.6863-44.6863a8,8,0,0,0-11.3137,0Z"
+                    id="path4"
+                    style="fill:#6e6e6e;fill-opacity:1;stroke:none"/>
+        </g>
+        <path
+                d="M224,76.68652,179.314,32a15.99948,15.99948,0,0,0-22.62744,0L130.34479,58.3418l-.00153.00146-.0014.00147L36.687,151.99951a15.95215,15.95215,0,0,0-3.574,5.459c-.07917.19238-.14551.38818-.20911.585a15.99183,15.99183,0,0,0-.90387,5.27V208a16.01833,16.01833,0,0,0,16,16H92.68652a15.97724,15.97724,0,0,0,5.70423-1.05908c.03845-.01514.078-.02588.11633-.04151A15.95471,15.95471,0,0,0,104,219.31348l120.00049-120A16.01823,16.01823,0,0,0,224,76.68652ZM48,179.31348,76.6864,208H48Zm48.00006,25.373L51.31366,160l84.6864-84.68652L180.68646,120Zm96-96L147.31366,64,168,43.31348,212.68652,88Z"
+                id="path8"
+                style="fill:#6e6e6e;fill-opacity:1;stroke:none"/>
+    </g>
+</svg>

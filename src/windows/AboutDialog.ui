@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AboutDialog</class>
+ <widget class="QDialog" name="AboutDialog">
+  <property name="windowModality">
+   <enum>Qt::WindowModality::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>700</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>About ${APP_NAME}</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="lbl_info">
+       <property name="styleSheet">
+        <string notr="true">b</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;${APP_DISPLAY_NAME}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;Version ${VERSION_STRING}&lt;/p&gt;&lt;p&gt;${APP_NAME} is an application that is able to generate pre-baked fonts for various types of applications, for example video games and embedded systems.&lt;/p&gt;&lt;p&gt;Copyright © 2024 Cemalettin Dervis&lt;/p&gt;&lt;p&gt;Website: &lt;a href=&quot;${APP_WEBSITE}&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#3586ff;&quot;&gt;${APP_WEBSITE}&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::TextFormat::RichText</enum>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+       <property name="openExternalLinks">
+        <bool>true</bool>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::TextInteractionFlag::TextBrowserInteraction</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="lbl_logo">
+         <property name="minimumSize">
+          <size>
+           <width>64</width>
+           <height>64</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>64</width>
+           <height>64</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="../resources/GeneralResources.qrc">:/AppIcon512.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>400</height>
+      </size>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Third-party</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLabel" name="lbl_license_info">
+         <property name="text">
+          <string>${APP_NAME} uses several third-party, open-source libraries and components which are listed below:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Policy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_3" columnstretch="2,10">
+         <property name="leftMargin">
+          <number>15</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>18</number>
+         </property>
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://www.qt.io&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#3586ff;&quot;&gt;https://www.qt.io&lt;br/&gt;&lt;/span&gt;&lt;/a&gt;This software uses the Qt framework under the LGPLv3 license. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="RightAlignedLabel" name="label_7">
+           <property name="font">
+            <font>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Qt</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Build Information</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="1">
+          <widget class="QLabel" name="lbl_compiler_name_value">
+           <property name="text">
+            <string>&lt;CompilerName&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="RightAlignedLabel" name="lbl_qt_version">
+           <property name="text">
+            <string>Linked Qt Version:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="RightAlignedLabel" name="lbl_build_date">
+           <property name="text">
+            <string>Build Date:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLabel" name="lbl_built_on_value">
+           <property name="text">
+            <string>&lt;BuiltOn&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLabel" name="lbl_build_date_value">
+           <property name="text">
+            <string>&lt;BuildDate&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLabel" name="lbl_built_for_value">
+           <property name="text">
+            <string>&lt;BuiltFor&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="RightAlignedLabel" name="lbl_built_for">
+           <property name="text">
+            <string>Built For:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="RightAlignedLabel" name="lbl_built_on">
+           <property name="text">
+            <string>Built On:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="RightAlignedLabel" name="lbl_compiler">
+           <property name="text">
+            <string>Compiler Name:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLabel" name="lbl_qt_version_value">
+           <property name="text">
+            <string>&lt;QtVersion&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="RightAlignedLabel" name="lbl_compiler_version">
+           <property name="text">
+            <string>Compiler Version:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLabel" name="lbl_compiler_version_value">
+           <property name="text">
+            <string>&lt;CompilerVersion&gt;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_5">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="btn_send_feedback">
+       <property name="focusPolicy">
+        <enum>Qt::FocusPolicy::TabFocus</enum>
+       </property>
+       <property name="text">
+        <string>Send feedback</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>:/ui/icons-dark/message.svg</normaloff>:/ui/icons-dark/message.svg</iconset>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_report_issue">
+       <property name="text">
+        <string>Report an issue</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_ok">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::FocusPolicy::StrongFocus</enum>
+       </property>
+       <property name="text">
+        <string>Ok</string>
+       </property>
+       <property name="default">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RightAlignedLabel</class>
+   <extends>QLabel</extends>
+   <header>widgets/RightAlignedLabel.hpp</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resources/GeneralResources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btn_ok</sender>
+   <signal>clicked()</signal>
+   <receiver>AboutDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>538</x>
+     <y>420</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>205</x>
+     <y>112</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_send_feedback</sender>
+   <signal>clicked()</signal>
+   <receiver>AboutDialog</receiver>
+   <slot>send_feedback()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>81</x>
+     <y>404</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>315</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_report_issue</sender>
+   <signal>clicked()</signal>
+   <receiver>AboutDialog</receiver>
+   <slot>report_issue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>141</x>
+     <y>677</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>349</x>
+     <y>349</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>send_feedback()</slot>
+  <slot>report_issue()</slot>
+ </slots>
+</ui>

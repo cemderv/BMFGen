@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CharacterSetsDialog</class>
+ <widget class="QDialog" name="CharacterSetsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>808</width>
+    <height>677</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Character Sets</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Here you may manage all character sets that should be available in the font.</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QListWidget" name="char_set_list_widget">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>300</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::FocusPolicy::NoFocus</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="CharacterSetSelectionWidget" name="chars_list_widget">
+       <property name="maximumSize">
+        <size>
+         <width>500</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="uniformItemSizes">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QPushButton" name="btn_select_all">
+       <property name="text">
+        <string>Select all</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_select_none">
+       <property name="text">
+        <string>Select none</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Font:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFontComboBox" name="cmb_preview_font">
+       <property name="font">
+        <font>
+         <family>.AppleSystemUIFont</family>
+        </font>
+       </property>
+       <property name="currentFont">
+        <font/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="lbl_chars_selected_info">
+       <property name="text">
+        <string>&lt;CharsSelectedInfo&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="button_box">
+       <property name="standardButtons">
+        <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CharacterSetSelectionWidget</class>
+   <extends>QListWidget</extends>
+   <header>widgets/CharacterSetSelectionWidget.hpp</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resources/UIResources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>char_set_list_widget</sender>
+   <signal>itemSelectionChanged()</signal>
+   <receiver>CharacterSetsDialog</receiver>
+   <slot>on_item_selection_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>230</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>405</x>
+     <y>235</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_box</sender>
+   <signal>rejected()</signal>
+   <receiver>CharacterSetsDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>487</x>
+     <y>442</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>405</x>
+     <y>235</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_box</sender>
+   <signal>accepted()</signal>
+   <receiver>CharacterSetsDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>487</x>
+     <y>442</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>405</x>
+     <y>235</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmb_preview_font</sender>
+   <signal>currentFontChanged(QFont)</signal>
+   <receiver>CharacterSetsDialog</receiver>
+   <slot>on_preview_font_changed(QFont)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>907</x>
+     <y>594</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>521</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>char_set_list_widget</sender>
+   <signal>itemChanged(QListWidgetItem*)</signal>
+   <receiver>CharacterSetsDialog</receiver>
+   <slot>on_char_set_item_changed(QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>162</x>
+     <y>308</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>403</x>
+     <y>338</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>char_set_list_widget</sender>
+   <signal>itemDoubleClicked(QListWidgetItem*)</signal>
+   <receiver>CharacterSetsDialog</receiver>
+   <slot>on_item_double_clicked(QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>162</x>
+     <y>308</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>403</x>
+     <y>338</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_select_all</sender>
+   <signal>clicked()</signal>
+   <receiver>CharacterSetsDialog</receiver>
+   <slot>on_select_all_char_sets()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>55</x>
+     <y>603</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>403</x>
+     <y>338</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_select_none</sender>
+   <signal>clicked()</signal>
+   <receiver>CharacterSetsDialog</receiver>
+   <slot>on_select_no_char_sets()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>162</x>
+     <y>603</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>403</x>
+     <y>338</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_current_char_set_selection_changed()</slot>
+  <slot>on_preview_font_changed(QFont)</slot>
+  <slot>on_char_set_item_changed(QListWidgetItem*)</slot>
+  <slot>on_item_double_clicked(QListWidgetItem*)</slot>
+  <slot>on_select_all_char_sets()</slot>
+  <slot>on_select_no_char_sets()</slot>
+  <slot>on_item_selection_changed()</slot>
+ </slots>
+</ui>
