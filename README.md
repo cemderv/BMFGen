@@ -1,6 +1,6 @@
 # BMFGen
 
-<img src="https://github.com/cemderv/BMFGen/blob/develop/img/web/icon-192.png?raw=true" width="200">
+<img src="https://github.com/cemderv/BMFGen/blob/main/img/web/icon-192.png?raw=true" width="100">
 
 BMFGen is an open source, easy-to-use bitmap font generator for Windows, macOS and Linux.
 
