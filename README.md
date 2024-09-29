@@ -6,6 +6,8 @@ BMFGen is an open source, easy-to-use bitmap font generator for Windows, macOS a
 
 Simply choose a font, tweak it, and export it to a format of your choice.
 
+[https://bmfgen.com](https://bmfgen.com)
+
 ![BMFGen Preview](img/bmfgen-preview.webp)
 
 ## Features
