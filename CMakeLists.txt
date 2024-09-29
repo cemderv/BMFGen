@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.20)
 
 include(cmake/CPM.cmake)
 
-if (NOT CMAKE_PREFIX_PATH STREQUAL)
+if (NOT CMAKE_PREFIX_PATH)
   if (WIN32)
     # Specify Qt installation path
     set(CMAKE_PREFIX_PATH "C:/Qt/6.7.2/msvc2019_64")
