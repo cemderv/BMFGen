@@ -45,35 +45,16 @@ cmake --build build --config Release --parallel
 
 Replace `6.7.2` with the version you installed if it is different.
 
-### On macOS
+### On macOS and Linux
 
-Install Qt using [Homebrew](https://brew.sh):
+Install Qt using [Homebrew](https://brew.sh) (recommended):
 
 ```bash
 brew install qt
 ```
 
-Then:
-
-```bash
-# Set up the project
-cmake -B build
-
-# Build
-cmake --build build --config Release --parallel
-```
-
-### On Linux
-
-Install Qt 6 development packages first, e.g.:
-
-```bash
-# for apt:
-sudo apt install qt6-base-dev
-
-# for RPM:
-sudo dnf install qt6-base-devel
-```
+On Linux, you can also use your system's package manager, such as `apt` or `dnf`.
+Please ensure that it provides at least Qt 6.4.
 
 Then:
 
