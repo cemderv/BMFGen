@@ -22,6 +22,9 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 message(STATUS "[BMFGen] Looking for Qt")
 find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
 
+message(STATUS "Found Qt widgets include dirs: ${Qt6Widgets_INCLUDE_DIRS}")
+message(STATUS "Qt widgets version: ${Qt6Widgets_VERSION")
+
 # GSL
 CPMAddPackage(
   NAME GSL
