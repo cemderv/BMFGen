@@ -85,24 +85,3 @@ target_compile_definitions(BMFGen PRIVATE "-DQT_NO_DEBUG_OUTPUT" "-DQT_NO_INFO_O
 
 qt_finalize_executable(BMFGen)
 
-install(TARGETS BMFGen
-  BUNDLE DESTINATION .
-  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-)
-
-set(deploy_tool_options_arg "")
-if (APPLE)
-  set(deploy_tool_options_arg --hardened-runtime)
-elseif (WIN32)
-  set(deploy_tool_options_arg --no-compiler-runtime)
-endif ()
-
-qt_generate_deploy_app_script(
-  TARGET BMFGen
-  OUTPUT_SCRIPT deploy_script
-  NO_UNSUPPORTED_PLATFORM_ERROR
-  DEPLOY_TOOL_OPTIONS ${deploy_tool_options_arg}
-)
-
-install(SCRIPT ${deploy_script})
-
