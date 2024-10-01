@@ -29,7 +29,7 @@ BMFGen is licensed under the GNU General Public License v3.0 (GPLv3).
 # Building
 
 BMFGen is written in C++ and uses the Qt framework.
-A C++ toolchain, CMake >= 3.20 and Qt 6 is required to build BMFGen.
+A C++ toolchain, CMake >= 3.20 and Qt >= 6.4 is required to build BMFGen.
 
 ### On Windows
 
