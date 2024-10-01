@@ -40,7 +40,7 @@ Install the [Qt binaries](https://www.qt.io/download-qt-installer-oss), then ins
 cmake -B build -DCMAKE_PREFIX_PATH="C:/Qt/6.7.2/msvc2019_64"
 
 # Build
-cmake --build build --config Release
+cmake --build build --config Release --parallel
 ```
 
 Replace `6.7.2` with the version you installed if it is different.
@@ -60,12 +60,30 @@ Then:
 cmake -B build
 
 # Build
-cmake --build build --config Release
+cmake --build build --config Release --parallel
 ```
 
 ### On Linux
 
-TBD
+Install Qt 6 development packages first, e.g.:
+
+```bash
+# for apt:
+sudo apt install qt6-base-dev
+
+# for RPM:
+sudo dnf install qt6-base-devel
+```
+
+Then:
+
+```bash
+# Set up the project
+cmake -B build
+
+# Build
+cmake --build build --config Release --parallel
+```
 
 # FAQ
 
